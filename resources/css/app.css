@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+/* app.css or your custom CSS file */
+.btn-primary {
+    @apply max-w-[270px] bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded cursor-pointer;
+  }
+
+.logo{
+    @apply text-4xl text-teal-600 font-bold;
+}
+.input{
+    @apply min-w-[270px] px-2 py-2 rounded border border-gray-200 focus:outline-none focus:ring-1 focus:ring-teal-600;
+}
+.main{
+    @apply mt-[10vh] flex flex-col items-center pt-5 px-[100px];
+}
+.card{
+    @apply p-5 flex flex-col gap-2 justify-center border-l border-teal-600 rounded shadow w-[250px];
+}
+.card h3{
+    @apply font-semibold text-gray-700 text-xl;
+}
+.card p{
+    @apply font-bold text-2xl text-gray-700;
+}
+h2{
+    @apply text-lg font-semibold;
+}
+.filters button{
+    @apply text-blue-900 p-2 hover:bg-gray-200;
+}
+b{
+    @apply font-bold;
+}
+
+
+
+
+/* app.css or your main stylesheet */
+
+.inventory-table {
+    width: 100%; /* Or a specific width if needed */
+    border-collapse: collapse; /* Essential for table styling */
+    overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+    display: block; /* Needed for sticky header */
+    max-height: 72vh; /* Set a maximum height for the table */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.inventory-table th {
+    background-color: #f0f0f0; /* Example header background color */
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1; /* Ensure header is above the content */
+    padding: 10px; /* Adjust padding as needed */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Add a bottom border */
+    white-space: nowrap; /* Prevent header text from wrapping */
+}
+
+.inventory-table td {
+    padding: 10px; /* Adjust padding as needed */
+    border-bottom: 1px solid #ddd; /* Add a bottom border */
+    white-space: nowrap; /* Prevent cell content from wrapping */
+    overflow: hidden; /* Hide overflowing content */
+    text-overflow: ellipsis; /* Add ellipsis (...) for overflowing text */
+}
+
+/* Optional: Add hover effect on rows */
+.inventory-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Optional: Style the scrollbar */
+.inventory-table::-webkit-scrollbar {
+    width: 10px; /* Adjust scrollbar width */
+}
+
+.inventory-table::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Scrollbar track background */
+}
+
+.inventory-table::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar thumb color */
+    border-radius: 5px; /* Round the scrollbar thumb */
+}
+
+.inventory-table::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Scrollbar thumb color on hover */
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+    .inventory-table {
+        font-size: 14px;
+    }
+
+    .inventory-table th,
+    .inventory-table td {
+        padding: 5px;
+    }
+}
